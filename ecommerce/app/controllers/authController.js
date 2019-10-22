@@ -12,16 +12,10 @@ module.exports = {
 
     async register(req, res, next) {
         try {
-            const {
-                email
-            } = req.body;
+            const { email } = req.body;
 
-            if (await User.findOne({
-                    where: {
-                        email
-                    }
-                })) {
-                req.flash('error', 'E-mail já cadastrado!');
+            if (await User.findOne({ where: { email }})) {
+                req.flash('error', 'O e-mail informada já possui cadastro!');
                 return res.redirect('back');
             }
 
@@ -32,7 +26,7 @@ module.exports = {
                 password
             });
 
-            req.swal("Usuário cadastrado com sucesso!", "success");
+            req.flash('success', 'Usuário Cadastrado com sucesso!');
             return res.redirect('/');
         } catch (err) {
             return next(err);
@@ -41,24 +35,19 @@ module.exports = {
 
     async authenticate(req, res, next) {
         try {
-            const {
-                email,
-                password
-            } = req.body;
+            const { email, password } = req.body;
 
             const user = await User.findOne({
-                where: {
-                    email
-                }
+                where: { email }
             });
 
             if (!user) {
-                req.flash('error', 'Usuário inexistente');
+                req.flash('error', 'O usuário informado não existe!');
                 return res.redirect('back');
             }
 
             if (!await bcrypt.compare(password, user.password)) {
-                req.flash('error', 'Senha incorreta');
+                req.flash('error', 'Senha incorreta!');
                 return res.redirect('back');
             }
 
