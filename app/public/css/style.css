@@ -1,0 +1,210 @@
+/* html {
+    overflow: hidden;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.card{
+    border-radius: 20px;
+}
+
+body{
+    background-image: url(../img/Changing-E-commerce-Landscape-Global-Trends-for-2019-and-Beyond1.jpg);    
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.login, .logout{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+}
+
+#card01{
+    border-radius: 20px;
+}
+
+#card02{
+    border-radius: 20px;
+}
+
+#card-secondary{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.alert {
+    position: absolute;
+    min-width: 300px;
+    right: 20px;
+    top: 20px;
+    background: rgb(0, 163, 125);
+    color: #FFF;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    font-size: 14px;
+    transition: all .2s;
+    opacity: 1;
+}
+
+.alert-danger {
+    background: rgb(248, 81, 81);
+}
+
+.alert-hidden {
+    opacity: 0;
+} */
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+form {
+    overflow: hidden;
+    animation: fade 0.2s;
+}
+
+form .md-form:nth-child(1) {
+    animation: move 500ms;
+}
+
+form .md-form:nth-child(2) {
+    animation: move 400ms;
+    animation-delay: 100ms;
+    animation-fill-mode: backwards;
+}
+
+form .md-form:nth-child(3) {
+    animation: move 400ms;
+    animation-delay: 100ms;
+    animation-fill-mode: backwards;
+}
+
+form .btn-form {
+    margin: auto;
+    padding: 7px;
+    animation: move 400ms;
+    animation-delay: 250ms;
+    animation-fill-mode: backwards;
+}
+
+@keyframes move {
+    from {
+        opacity: 0;
+        transform: translateX(-35%);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.form-hide {
+    animation: down 1.2s forwards;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes down {
+    from {
+        transform: translateY(0);
+    }
+    
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+.card {
+    margin-top: 30%;
+    border-radius: 15px;
+}
+
+#card-header {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background: rgb(0, 212, 255);
+    background: linear-gradient(90deg, rgba(0, 212, 255, 1) 0%, rgba(34, 162, 228, 1) 50%, rgba(39, 78, 173, 1) 100%);
+}
+
+.center {
+    margin: auto;
+}
+
+.btn-form {
+    border: 2px solid #33b5e5;
+    box-shadow: 0px 10px 14px -7px rgba(0, 0, 0, 0.09);
+    border-radius: 6px;
+    background-color: white;
+    
+}
+
+.btn-form:hover {
+    color: white;
+    background-color: #33b5e5;
+}
+
+#card01 {
+    border-radius: 20px;
+}
+
+#card02 {
+    border-radius: 20px;
+}
+
+#aciona{
+    border-radius:15px;
+    border-color: black;
+}
+
+svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: rgba(78, 172, 221, 0.9);
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+}
